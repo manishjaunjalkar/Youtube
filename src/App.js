@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from "react";
+import "./App.css"
+import Search from "./Components/Search";
+import Videos from "./Components/Videos";
+import VideoPlay from "./Components/VideoPlay";
 
 function App() {
+  let[videos, setVideos]= useState([])
+  let[currVideo, setCurrVideo]= useState(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <div>
+    <Search addVideos={setVideos}/>
+    <div style={{display:"flex"}}>
+   
+      <div style={{width:"70vw"}}>
+        <VideoPlay video={currVideo}/>
+      </div>
+      
+      <div style={{width:"30vw"}}>
+         <Videos videos={videos} setCurrVideo={setCurrVideo} />
+      </div>
+    </div>
+    
+
     </div>
   );
 }

@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+.video-main{
+  display: flex;
+  border: 2px solid red;
+  justify-content: center;
+  
+}
+.video{
+  width: 95%;
+}
+.search{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+
+}
+.search > input{
+  height: 30px;
+  width: 300px;
+  border: 2px solid grey;
+  text-indent: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  
+}
+.search > button{
+  width: 100px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+body{
+  background-color: aliceblue;
+}
+.button{
+  margin-left: 10px;
+  width: 100px;
+  height: 25px;
+  background-color: rgb(255, 34, 34);
+  border-style: none;
+  border: 1px solid gray;
+}
